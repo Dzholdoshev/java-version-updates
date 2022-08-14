@@ -3,7 +3,7 @@ package com.cydeo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team <T extends Player>{ //T-SoccerPlayer, FootballPlayer, BaseballPlayer
+public class Team<T extends Player> {  //Any class you can pass to Team. Should accept only Player class and subclasses
 
     private String name;
 
@@ -18,14 +18,13 @@ public class Team <T extends Player>{ //T-SoccerPlayer, FootballPlayer, Baseball
     }
 
     public boolean addPlayer(T player){
-
         if(members.contains(player)){
-            System.out.println(((Player)player).getName()+" is already on the team");
+            System.out.println(((Player)player).getName() + " is already on the team");
             return false;
-        }else {members.add((T) player);
-            System.out.println(((Player)player).getName()+" picked for the team"+ this.name);
-        return true;}
+        }else{
+            members.add(player);
+            System.out.println(((Player)player).getName() + " picked for team" + this.name);
+            return true;
+        }
     }
-
-    Team <String> brokenTeam = new Team<>("what kind of team is this?");
 }
