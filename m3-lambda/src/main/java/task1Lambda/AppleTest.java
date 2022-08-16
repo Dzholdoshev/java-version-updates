@@ -13,6 +13,9 @@ public class AppleTest {
         apples.add(new Apple(80, Color.RED));
         apples.add(new Apple(350, Color.GREEN));
 
+        apples.forEach(apple -> System.out.println(apple));
+
+
       //  AppleOutput colorOutput = apple -> "A " + apple.getColor().label + " apple";
       //  AppleTest.findApples(apples, colorOutput);
         AppleTest.findApples(apples, apple -> "An apple of " + apple.getWeight() + "g");
