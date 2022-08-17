@@ -25,7 +25,10 @@ public class AppleTest {
             return  "A " + ch + " " + apple.getColor() + " orange";
         };
 
-        AppleTest.findApples(apples,fancyFormatter);
+        AppleTest.findApples(apples,apple ->{
+            String ch = apple.getWeight() > 200 ? "Heavy" : "Light";
+            return  "A " + ch + " " + apple.getColor() + " orange";
+        });
 
     }
 
