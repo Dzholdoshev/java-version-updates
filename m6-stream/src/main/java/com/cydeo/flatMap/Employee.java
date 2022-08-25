@@ -12,4 +12,5 @@ public class Employee {
     private String empName;
     private String empEmail;
     private List<String> empPhoneNumbers;
+    private int salary;
 }

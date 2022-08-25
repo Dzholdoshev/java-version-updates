@@ -62,7 +62,7 @@ public class FindingMatching {
 
 
         //MIN AND MAX
-
+        System.out.println("min and max");
         System.out.println(DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories)));
         System.out.println(DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories)));
 
